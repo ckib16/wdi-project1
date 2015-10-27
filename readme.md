@@ -1,7 +1,9 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #1
 
-## Javascript Trivia Game!
+## Javascript Jeopardy!
 My first project using Javascript and JQuery in the wild. Test your JS knowledge.
+
+![](http://assets.fontsinuse.com/static/use-media-items/17/16669/full-854x469/5621519d/jeopardy-logo.jpeg?resolution=0)
 
 ### Installation
 This game is hosted at GitHub pages [here](http://www.verticalupdesign.com/wdi-project1/).
