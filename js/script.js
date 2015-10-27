@@ -1,7 +1,7 @@
 /* global $ */
 
 $(document).ready(function () {
-  // - loop through bank to cycle thru questions
+  // - loop through nested object to cycle thru questions
   // -- on next button (when clicked)...
   // -- increment to next question
 
@@ -33,6 +33,14 @@ $(document).ready(function () {
         c3: 'choice 3',
         a: '3'
       }
+    }
+
+    for (key in questionBank) {
+      console.log(key) // q1
+      console.log(questionBank[key].t)
+      console.log(questionBank[key].c1)
+      console.log(questionBank[key].c2)
+      console.log(questionBank[key].c3)
     }
 
     $('#resetButton').on('click', function () {
