@@ -1,6 +1,14 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #1
 
-## Make a game!
+## Trivia Game!
+My url is [here](http://www.verticalupdesign.com/wdi-project1/)
+
+## User stories
+1. As a user, I want to read a question and have multiple choices presented, so I can pick the best answer.
+2. As a user, I want to enter my selection in an input field, so I can tell the computer my choice.
+3. As a user, I want my answer evaluated for correctness when I click on the "Submit" button, so I can see if I was right or wrong.
+4. As a user, I want my score incremented or decremented if I get the question right or wrong, respectively, so I can keep track of my progress.
+5. As a user, I want the ability to post my high score to a leaderboard, so that I can see my progress over time.
 
 ### Overview
 

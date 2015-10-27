@@ -1,14 +1,13 @@
 /* global $ */
 
 $(document).ready(function () {
-  // console.log('JS works')
-  // console.log($('h1'))
-  // console.log(question.q1)
-
   // Question bank
   // - object/hash of question numbers with choices and an answer
   // - loop through bank to cycle thru questions
-  // - pass question to the printQuestion function
+  // -- on next button (when clicked)...
+  // -- increment to next question
+  // -- refresh page, input field and resultDiv
+  // -- increment score
 
   function printQuestion () {
     var questionBank = {
@@ -35,14 +34,6 @@ $(document).ready(function () {
       }
     }
 
-    // var question = {
-    //   t: 'This is the text for the question',
-    //   c1: 'choice 1',
-    //   c2: 'choice 2',
-    //   c3: 'choice 3',
-    //   a: '1'
-    // }
-
     $('.questionDiv > p').html(questionBank.q1.t)
     $('.choiceDiv p:eq(0)').html(questionBank.q1.c1)
     $('.choiceDiv p:eq(1)').html(questionBank.q1.c2)
@@ -61,13 +52,19 @@ $(document).ready(function () {
   printQuestion()
 })
 
-/* TRIVIA GAME
-TO DO
+/* TRIVIA GAME TO DO
+
+Deliverables
+[x] 5 user stories
+[ ] hosted on GH Pages
+[ ] HTML/CSS validated
+[x] lots of commits
+[ ] readme with explanations of the technologies used, the approach taken, installation instructions, unsolved problems, etc
 
 CORE
-- question bank with multiple questions
 - reset input screen to blank
 - allow input submission with enter key (not clicking on button)
+- actual questions in bank
 - score increments for correct answer, decrements for wrong answer
 
 CSS & bootstrap
@@ -75,9 +72,9 @@ CSS & bootstrap
 Deploy to Github
 
 *Bonus:*
+  * Allow users to compete against each other on a high-score board.
   * Add time-based scoring
   * Track scores across games (even if the page is reloaded)
-  * Allow users to compete against each other on a high-score board.
 
 Optional
   randomize questions
