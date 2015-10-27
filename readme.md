@@ -39,10 +39,10 @@ I took an iterative approach to building out the user stories below. The focus w
 - [x] readme with explanations of the technologies used, the approach taken, installation instructions, unsolved problems, etc  
 
 #### Core
-- [ ]allow input submission with enter key (not clicking on button)
-- [ ]actual questions in bank
-- [ ]CSS & bootstrap
-- [ ]Deploy to Github
+- [ ] allow input submission with enter key (not clicking on button)
+- [ ] actual questions in bank
+- [ ] CSS & bootstrap
+- [ ] Deploy to Github
 
 #### Options
 - randomize questions
@@ -54,13 +54,13 @@ I took an iterative approach to building out the user stories below. The focus w
   * Track scores across games (even if the page is reloaded)
 
 #### DONE
-- [x]Question properties
+- [x] Question properties
   - question has multiple possibleAnswers (1-3)
   - question has an single correctAnswer (1-3)  
-- [x]Ask player for input  
-- [x]If input matches AnswerKey then show "correct" and go to next question
-- [x]reset input screen to blank
-- [x]score increments for correct answer, decrements for wrong answer
+- [x] Ask player for input  
+- [x] If input matches AnswerKey then show "correct" and go to next question
+- [x] reset input screen to blank
+- [x] score increments for correct answer, decrements for wrong answer
 
 
 ## GA Criteria
