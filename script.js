@@ -9,7 +9,8 @@ $(document).ready(function () {
   // -- refresh page, input field and resultDiv
   // -- increment score
 
-  function printQuestion () {
+  function playGame () {
+    var score = 0
     var questionBank = {
       q1: {
         t: 'This is the question #1 text',
@@ -34,6 +35,12 @@ $(document).ready(function () {
       }
     }
 
+    $('#resetButton').on('click', function () {
+      console.log('Reset Button Clicked')
+      $('#input-field').val('')
+      $('.resultDiv > p').html('')
+    })
+
     $('.questionDiv > p').html(questionBank.q1.t)
     $('.choiceDiv p:eq(0)').html(questionBank.q1.c1)
     $('.choiceDiv p:eq(1)').html(questionBank.q1.c2)
@@ -43,13 +50,16 @@ $(document).ready(function () {
       var inputSubmitted = $('#input-field').val()
       if (inputSubmitted === questionBank.q1.a) {
         $('.resultDiv > p').html('Correct! Good Job')
+        score += 1
+        $('.scoreDiv > p').html('Your score is ' + score)
       } else {
         $('.resultDiv > p').html('Sorry! Try again...')
+        score -= 1
+        $('.scoreDiv > p').html('Your score is ' + score)
       }
     })
   }
-
-  printQuestion()
+  playGame()
 })
 
 /* TRIVIA GAME TO DO
