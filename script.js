@@ -1,15 +1,14 @@
 /* global $ */
 
 $(document).ready(function () {
-  // Question bank
-  // - object/hash of question numbers with choices and an answer
   // - loop through bank to cycle thru questions
   // -- on next button (when clicked)...
   // -- increment to next question
-  // -- refresh page, input field and resultDiv
-  // -- increment score
 
   function playGame () {
+    // hide next button div until correct
+    // when clicked, next button iterates through a loop in questionBank
+    $('#nextButton').hide('slow/400/fast')
     var score = 0
     var questionBank = {
       q1: {
@@ -57,6 +56,10 @@ $(document).ready(function () {
         score -= 1
         $('.scoreDiv > p').html('Your score is ' + score)
       }
+      $('#nextButton').show('slow/400/fast')
+      $('#nextButton').on('click', function () {
+        console.log('Next button Clicked')
+      })
     })
   }
   playGame()
@@ -66,16 +69,14 @@ $(document).ready(function () {
 
 Deliverables
 [x] 5 user stories
-[ ] hosted on GH Pages
+[x] hosted on GH Pages
 [ ] HTML/CSS validated
 [x] lots of commits
 [ ] readme with explanations of the technologies used, the approach taken, installation instructions, unsolved problems, etc
 
 CORE
-- reset input screen to blank
 - allow input submission with enter key (not clicking on button)
 - actual questions in bank
-- score increments for correct answer, decrements for wrong answer
 
 CSS & bootstrap
 
@@ -95,7 +96,8 @@ DONE
 Question properties
 - question has multiple possibleAnswers (1-3)
 - question has an single correctAnswer (1-3)
-
 Ask player for input
 If input matches AnswerKey then show "correct" and go to next question
+- reset input screen to blank
+- score increments for correct answer, decrements for wrong answer
 */
