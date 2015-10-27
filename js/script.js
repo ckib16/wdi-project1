@@ -9,7 +9,7 @@ $(document).ready(function () {
     $('#nextButton').hide('slow/400/fast')
 
     var score = 0
-    $('.scoreDiv > p').html('Your score is ' + score)
+    $('#scoreDiv > p').html('Your score is ' + score)
 
     var questionBank = {
       q1: {
@@ -38,27 +38,27 @@ $(document).ready(function () {
     $('#resetButton').on('click', function () {
       console.log('Reset Button Clicked')
       $('#input-field').val('')
-      $('.resultDiv > p').html('')
+      $('#resultDiv > p').html('')
       score = 0
-      $('.scoreDiv > p').html('Your score is ' + score)
+      $('#scoreDiv > p').html('Your score is ' + score)
       playGame()
     })
 
-    $('.questionDiv > p').html(questionBank.q1.t)
-    $('.choiceDiv p:eq(0)').html(questionBank.q1.c1)
-    $('.choiceDiv p:eq(1)').html(questionBank.q1.c2)
-    $('.choiceDiv p:eq(2)').html(questionBank.q1.c3)
+    $('#questionDiv > p').html(questionBank.q1.t)
+    $('#choiceDiv p:eq(0)').html(questionBank.q1.c1)
+    $('#choiceDiv p:eq(1)').html(questionBank.q1.c2)
+    $('#choiceDiv p:eq(2)').html(questionBank.q1.c3)
 
     $('#set-input').on('click', function checkAnswer () {
       var inputSubmitted = $('#input-field').val()
       if (inputSubmitted === questionBank.q1.a) {
-        $('.resultDiv > p').html('Correct! Good Job')
+        $('#resultDiv > p').html('Correct! Good Job')
         score += 1
-        $('.scoreDiv > p').html('Your score is ' + score)
+        $('#scoreDiv > p').html('Your score is ' + score)
       } else {
-        $('.resultDiv > p').html('Sorry! Try again...')
+        $('#resultDiv > p').html('Sorry! Try again...')
         score -= 1
-        $('.scoreDiv > p').html('Your score is ' + score)
+        $('#scoreDiv > p').html('Your score is ' + score)
       }
       $('#nextButton').show('slow/400/fast')
       $('#nextButton').on('click', function () {
