@@ -6,16 +6,17 @@ $(document).ready(function () {
   // -- increment to next question
 
   function playGame () {
-    // hide next button div until correct
-    // when clicked, next button iterates through a loop in questionBank
     $('#nextButton').hide('slow/400/fast')
+
     var score = 0
+    $('.scoreDiv > p').html('Your score is ' + score)
+        
     var questionBank = {
       q1: {
-        t: 'This is the question #1 text',
-        c1: 'choice 1',
-        c2: 'choice 2',
-        c3: 'choice 3',
+        t: 'What is the definition of a "callback"?',
+        c1: '1) A piece of executable code that is passed as an argument to other code, which is expected to invoke (or "call back") that executable code at some convenient time.',
+        c2: '2) A function written with "call" in it.',
+        c3: '3) A function written to be used at a later time.',
         a: '1'
       },
       q2: {
@@ -38,6 +39,9 @@ $(document).ready(function () {
       console.log('Reset Button Clicked')
       $('#input-field').val('')
       $('.resultDiv > p').html('')
+      score = 0
+      $('.scoreDiv > p').html('Your score is ' + score)
+      playGame()
     })
 
     $('.questionDiv > p').html(questionBank.q1.t)
