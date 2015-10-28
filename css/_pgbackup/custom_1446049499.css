@@ -9,12 +9,12 @@ h2 {
   text-align: left;
 }
 
-.navbar-left h2 {
+.nav.navbar-nav.navbar-left h2 {
     color: white;
     line-height:40px
 }
 
-.navbar-right h2 {
+.nav.navbar-nav.navbar-right h2 {
     color: white;
     line-height:40px
 }
