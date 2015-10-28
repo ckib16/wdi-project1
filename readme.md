@@ -1,9 +1,9 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #1
 
-## Javascript Jeopardy!
+## Javascript Quiz!
 My first project using Javascript and JQuery in the wild. Test your JS knowledge.
 
-![](http://assets.fontsinuse.com/static/use-media-items/17/16669/full-854x469/5621519d/jeopardy-logo.jpeg?resolution=0)
+![](http://s.quickmeme.com/img/e5/e53c5e7aa3e4501bebc759246611fdf3b04f6af42c84451fa790787a9f99efc7.jpg)
 
 ### Installation
 This game is hosted at GitHub pages [here](http://www.verticalupdesign.com/wdi-project1/).
@@ -42,8 +42,8 @@ I took an iterative approach to building out the user stories below. The focus w
 
 #### Core
 - [ ] allow input submission with enter key (not clicking on button)
-- [ ] CSS & bootstrap tweaks
-- [ ] Deploy final to Github
+- [x] CSS & bootstrap tweaks
+- [x] Deploy final to Github
 
 #### Options
 - randomize questions
