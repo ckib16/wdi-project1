@@ -11,37 +11,57 @@ $(document).ready(function () {
     var score = 0
     $('#scoreDiv > p').html('Your score is ' + score)
 
-    var questionBank = {
-      q1: {
-        t: 'What is the definition of a "callback"?',
-        c1: '1) A piece of executable code that is passed as an argument to other code, which is expected to invoke (or "call back") that executable code at some convenient time.',
-        c2: '2) A function written with "call" in it.',
-        c3: '3) A function written to be used at a later time.',
-        a: '1'
-      },
-      q2: {
-        t: 'This is the question #2 text',
-        c1: 'choice 1',
-        c2: 'choice 2',
-        c3: 'choice 3',
-        a: '2'
-      },
-      q3: {
-        t: 'This is the question #3 text',
-        c1: 'choice 1',
-        c2: 'choice 2',
-        c3: 'choice 3',
-        a: '3'
-      }
-    }
+    var questionArray = [
+      'What is the definition of a "callback"?',
+      'This is the question #2 text',
+      'This is the question #3 text',
+      'This is the question #4 text',
+      'This is the question #5 text'
+    ]
 
-    for (key in questionBank) {
-      console.log(key) // q1
-      console.log(questionBank[key].t)
-      console.log(questionBank[key].c1)
-      console.log(questionBank[key].c2)
-      console.log(questionBank[key].c3)
-    }
+    var choiceArray1 = [
+      '1) A piece of executable code that is passed as an argument to other code, which is expected to invoke (or "call back") that executable code at some convenient time.',
+      '1) Choice 1',
+      '1) Choice 1',
+      '1) Choice 1',
+      '1) Choice 1'
+    ]
+
+    var choiceArray2 = [
+      '2) A function written with "call" in it.',
+      '2) Choice 2',
+      '2) Choice 2',
+      '2) Choice 2',
+      '2) Choice 2'
+    ]
+
+    var choiceArray3 = [
+      '3) A function written to be used at a later time.',
+      '3) Choice 3',
+      '3) Choice 3',
+      '3) Choice 3',
+      '3) Choice 3'
+    ]
+
+    var answerArray = [
+      '1',
+      '2',
+      '3',
+      '2',
+      '1'
+    ]
+
+    // $('#nextButton').on('click', function () {
+    //   // console.log(myArray[arrayIndex])
+    //   console.log($('#questionDiv > p').html(questionBank['q' + arrayIndex].t))
+    //   if (arrayIndex === myArray.length) {
+    //     console.log("You're done!")
+    //     return true
+    //   }
+    //   arrayIndex = arrayIndex + 1
+    // })
+
+    var roundCounter = 0
 
     $('#resetButton').on('click', function () {
       console.log('Reset Button Clicked')
@@ -52,17 +72,18 @@ $(document).ready(function () {
       playGame()
     })
 
-    $('#questionDiv > p').html(questionBank.q1.t)
-    $('#choiceDiv p:eq(0)').html(questionBank.q1.c1)
-    $('#choiceDiv p:eq(1)').html(questionBank.q1.c2)
-    $('#choiceDiv p:eq(2)').html(questionBank.q1.c3)
+    $('#questionDiv > p').html(questionArray[roundCounter])
+    $('#choiceDiv p:eq(0)').html(choiceArray1[roundCounter])
+    $('#choiceDiv p:eq(1)').html(choiceArray2[roundCounter])
+    $('#choiceDiv p:eq(2)').html(choiceArray3[roundCounter])
 
     $('#set-input').on('click', function checkAnswer () {
       var inputSubmitted = $('#input-field').val()
-      if (inputSubmitted === questionBank.q1.a) {
+      if (inputSubmitted === answerArray[roundCounter]) {
         $('#resultDiv > p').html('Correct! Good Job')
         score += 1
         $('#scoreDiv > p').html('Your score is ' + score)
+        roundCounter += 1
       } else {
         $('#resultDiv > p').html('Sorry! Try again...')
         score -= 1
