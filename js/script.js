@@ -92,7 +92,7 @@ $(document).ready(function () {
     roundCounter = 0
     console.log(roundCounter)
     $('#input-field').val('')
-    $('#resultDiv > p').html('')
+    $('#resultDiv > h2').html('')
     score = 0
     $('#scoreDiv > p').html('Your score is ' + score)
     $('#questionDiv').show('slow/400/fast')
