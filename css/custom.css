@@ -1,0 +1,20 @@
+/* Put your custom styles here */
+
+p {
+  color:white;
+  text-align: left;
+}
+
+h2 {
+  text-align: left;
+}
+
+.nav.navbar-nav.navbar-left h2 {
+    color: white;
+    line-height:40px
+}
+
+.nav.navbar-nav.navbar-right h2 {
+    color: white;
+    line-height:40px
+}
