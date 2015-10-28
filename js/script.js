@@ -5,35 +5,35 @@ $(document).ready(function () {
   var roundCounter = 0
 
   var questionArray = [
-    'What is the definition of a "callback"?',
-    'This is the question #2 text',
-    'This is the question #3 text',
-    'This is the question #4 text',
-    'This is the question #5 text'
+    'Q1 - What is the definition of a "callback"?',
+    'Q2 - What are the two ways to define a function in Javascript?',
+    'Q3 - What is the syntax for declaring a function?',
+    'Q4 - What is the syntax for expressing a function?',
+    'Q5 - Which syntax could be used as a method in a function?'
   ]
 
   var choiceArray1 = [
     '1) A piece of executable code that is passed as an argument to other code, which is expected to invoke (or "call back") that executable code at some convenient time.',
-    '1) Choice 1',
-    '1) Choice 1',
-    '1) Choice 1',
-    '1) Choice 1'
+    '1) Declaration & Method',
+    '1) var multiply = function ( num1, num2 ) {return num1 * num2}',
+    '1) function multiply( num1, num2 ) {return num1 * num2}',
+    '1) gps: function (location) {console.log( "Beep boop, driving to " + location )}'
   ]
 
   var choiceArray2 = [
     '2) A function written with "call" in it.',
-    '2) Choice 2',
-    '2) Choice 2',
-    '2) Choice 2',
-    '2) Choice 2'
+    '2) Declaration & Expression',
+    '2) gps: function (location) {console.log( "Beep boop, driving to " + location )}',
+    '2) var multiply = function ( num1, num2 ) {return num1 * num2}',
+    '2) function multiply( num1, num2 ) {return num1 * num2}'
   ]
 
   var choiceArray3 = [
     '3) A function written to be used at a later time.',
-    '3) Choice 3',
-    '3) Choice 3',
-    '3) Choice 3',
-    '3) Choice 3'
+    '3) Method & Expression',
+    '3) function multiply( num1, num2 ) {return num1 * num2}',
+    '3) gps: function (location) {console.log( "Beep boop, driving to " + location )}',
+    '3) var multiply = function ( num1, num2 ) {return num1 * num2}'
   ]
 
   var answerArray = [
@@ -59,12 +59,12 @@ $(document).ready(function () {
   $('#set-input').on('click', function () {
     var inputSubmitted = $('#input-field').val()
     if (inputSubmitted === answerArray[roundCounter]) {
-      $('#resultDiv > p').html('Correct! Good Job')
-      score += 1
+      $('#resultDiv > h2').html('Correct! Good Job')
+      score += 10
       $('#scoreDiv > p').html('Your score is ' + score)
     } else {
-      $('#resultDiv > p').html('Sorry! Try again...')
-      score -= 1
+      $('#resultDiv > h2').html('Sorry! Try again...')
+      score -= 10
       $('#scoreDiv > p').html('Your score is ' + score)
     }
     $('#nextButton').show('slow/400/fast')
@@ -74,10 +74,15 @@ $(document).ready(function () {
     console.log('Next button Clicked')
     console.log(roundCounter)
     roundCounter += 1
+    $('#resultDiv > h2').html('')
     if (roundCounter < totalRounds) {
       displayQuestion()
     } else {
+      $('#questionDiv').hide('slow/400/fast')
+      $('#choiceDiv').hide('slow/400/fast')
+      $('#inputDiv').hide('slow/400/fast')
       $('#nextButton').hide('slow/400/fast')
+      $('#set-input').hide('slow/400/fast')
       $('#resultDiv > p').html('All Done! Thanks for playing.')
     }
   })
@@ -88,6 +93,11 @@ $(document).ready(function () {
     $('#resultDiv > p').html('')
     score = 0
     $('#scoreDiv > p').html('Your score is ' + score)
+    $('#questionDiv').show('slow/400/fast')
+    $('#choiceDiv').show('slow/400/fast')
+    $('#inputDiv').show('slow/400/fast')
+    $('#nextButton').hide('slow/400/fast')
+    $('#set-input').show('slow/400/fast')
   })
 })
 

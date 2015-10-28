@@ -42,9 +42,9 @@ I took an iterative approach to building out the user stories below. The focus w
 
 #### Core
 - [ ] allow input submission with enter key (not clicking on button)
-- [ ] actual questions in bank
-- [ ] CSS & bootstrap
-- [ ] Deploy to Github
+- [x] actual questions in bank
+- [x] CSS & bootstrap
+- [x] Deploy to Github
 
 #### Options
 - randomize questions
