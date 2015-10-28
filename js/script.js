@@ -48,6 +48,7 @@ $(document).ready(function () {
   $('#scoreDiv').html('Your score is ' + score)
 
   function displayQuestion () {
+    $('#set-input').show('slow/400/fast')
     $('#nextButton').hide('slow/400/fast')
     $('#questionDiv > p').html(questionArray[roundCounter])
     $('#choiceDiv p:eq(0)').html(choiceArray1[roundCounter])
@@ -56,9 +57,10 @@ $(document).ready(function () {
   }
   displayQuestion()
 
-  $('#set-input').on('click', function () {
+  var setInput = function () {
     var inputSubmitted = $('#input-field').val()
     if (inputSubmitted === answerArray[roundCounter]) {
+      $('#set-input').hide('slow/400/fast')
       $('#resultDiv > h2').html('Correct! Good Job')
       score += 10
       $('#scoreDiv').html('Your score is ' + score)
@@ -68,9 +70,18 @@ $(document).ready(function () {
       $('#scoreDiv').html('Your score is ' + score)
     }
     $('#nextButton').show('slow/400/fast')
+  }
+
+  $('#set-input').on('click', setInput)
+
+// If enter key pressed with html in input field, call setInput
+  $('html').on('keydown', function (e) {
+    if (e.keyCode === 13) {
+      setInput()
+    }
   })
 
-  $('#nextButton').on('click', function () {
+  var onNext = function () {
     console.log('Next button Clicked')
     console.log(roundCounter)
     roundCounter += 1
@@ -85,7 +96,9 @@ $(document).ready(function () {
       $('#set-input').hide('slow/400/fast')
       $('#resultDiv > h2').html('All Done! Thanks for playing.')
     }
-  })
+  }
+
+  $('#nextButton').on('click', onNext)
 
   $('#resetButton').on('click', function () {
     console.log('Reset Button Clicked')
@@ -103,6 +116,3 @@ $(document).ready(function () {
     displayQuestion()
   })
 })
-
-// Get rid of playGame, so can call displayQuestion at beginning
-// Trying to get rid of over-incrementing loop (skip Q#3, etc)
