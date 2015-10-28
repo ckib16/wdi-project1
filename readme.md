@@ -42,9 +42,8 @@ I took an iterative approach to building out the user stories below. The focus w
 
 #### Core
 - [ ] allow input submission with enter key (not clicking on button)
-- [x] actual questions in bank
-- [x] CSS & bootstrap
-- [x] Deploy to Github
+- [ ] CSS & bootstrap tweaks
+- [ ] Deploy final to Github
 
 #### Options
 - randomize questions
@@ -63,6 +62,7 @@ I took an iterative approach to building out the user stories below. The focus w
 - [x] If input matches AnswerKey then show "correct" and go to next question
 - [x] reset input screen to blank
 - [x] score increments for correct answer, decrements for wrong answer
+- [x] actual questions in bank
 
 
 ## GA Criteria

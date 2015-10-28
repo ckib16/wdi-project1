@@ -45,7 +45,7 @@ $(document).ready(function () {
   ]
 
   var score = 0
-  $('#scoreDiv > p').html('Your score is ' + score)
+  $('#scoreDiv').html('Your score is ' + score)
 
   function displayQuestion () {
     $('#nextButton').hide('slow/400/fast')
@@ -61,11 +61,11 @@ $(document).ready(function () {
     if (inputSubmitted === answerArray[roundCounter]) {
       $('#resultDiv > h2').html('Correct! Good Job')
       score += 10
-      $('#scoreDiv > p').html('Your score is ' + score)
+      $('#scoreDiv').html('Your score is ' + score)
     } else {
       $('#resultDiv > h2').html('Sorry! Try again...')
       score -= 10
-      $('#scoreDiv > p').html('Your score is ' + score)
+      $('#scoreDiv').html('Your score is ' + score)
     }
     $('#nextButton').show('slow/400/fast')
   })
@@ -94,7 +94,7 @@ $(document).ready(function () {
     $('#input-field').val('')
     $('#resultDiv > h2').html('')
     score = 0
-    $('#scoreDiv > p').html('Your score is ' + score)
+    $('#scoreDiv').html('Your score is ' + score)
     $('#questionDiv').show('slow/400/fast')
     $('#choiceDiv').show('slow/400/fast')
     $('#inputDiv').show('slow/400/fast')
