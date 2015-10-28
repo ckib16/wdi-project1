@@ -83,12 +83,14 @@ $(document).ready(function () {
       $('#inputDiv').hide('slow/400/fast')
       $('#nextButton').hide('slow/400/fast')
       $('#set-input').hide('slow/400/fast')
-      $('#resultDiv > p').html('All Done! Thanks for playing.')
+      $('#resultDiv > h2').html('All Done! Thanks for playing.')
     }
   })
 
   $('#resetButton').on('click', function () {
     console.log('Reset Button Clicked')
+    roundCounter = 0
+    console.log(roundCounter)
     $('#input-field').val('')
     $('#resultDiv > p').html('')
     score = 0
@@ -98,6 +100,7 @@ $(document).ready(function () {
     $('#inputDiv').show('slow/400/fast')
     $('#nextButton').hide('slow/400/fast')
     $('#set-input').show('slow/400/fast')
+    displayQuestion()
   })
 })
 
